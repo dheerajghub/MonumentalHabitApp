@@ -9,21 +9,47 @@
 /* Begin PBXBuildFile section */
 		440156962A221FC6006C3B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156952A221FC6006C3B7A /* AppDelegate.swift */; };
 		440156982A221FC6006C3B7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156972A221FC6006C3B7A /* SceneDelegate.swift */; };
-		4401569A2A221FC6006C3B7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156992A221FC6006C3B7A /* ViewController.swift */; };
-		4401569D2A221FC6006C3B7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4401569B2A221FC6006C3B7A /* Main.storyboard */; };
 		4401569F2A221FC8006C3B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4401569E2A221FC8006C3B7A /* Assets.xcassets */; };
 		440156A22A221FC8006C3B7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440156A02A221FC8006C3B7A /* LaunchScreen.storyboard */; };
+		440156B42A2224A3006C3B7A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156B32A2224A3006C3B7A /* Colors.swift */; };
+		440156BB2A2226B7006C3B7A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156BA2A2226B7006C3B7A /* UIColor+Extension.swift */; };
+		440156BD2A222886006C3B7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156BC2A222886006C3B7A /* ViewController.swift */; };
+		440156BF2A2228D6006C3B7A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156BE2A2228D6006C3B7A /* Fonts.swift */; };
+		440156C62A2229BC006C3B7A /* Klasik Shadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 440156C32A2229BB006C3B7A /* Klasik Shadow.otf */; };
+		440156C72A2229BC006C3B7A /* Klasik Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 440156C42A2229BB006C3B7A /* Klasik Regular.otf */; };
+		440156C82A2229BC006C3B7A /* Klasik Rough.otf in Resources */ = {isa = PBXBuildFile; fileRef = 440156C52A2229BC006C3B7A /* Klasik Rough.otf */; };
+		440156D02A222A14006C3B7A /* Manrope-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156C92A222A14006C3B7A /* Manrope-Medium.ttf */; };
+		440156D12A222A14006C3B7A /* Manrope-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CA2A222A14006C3B7A /* Manrope-Light.ttf */; };
+		440156D22A222A14006C3B7A /* Manrope-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CB2A222A14006C3B7A /* Manrope-SemiBold.ttf */; };
+		440156D32A222A14006C3B7A /* Manrope-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CC2A222A14006C3B7A /* Manrope-ExtraLight.ttf */; };
+		440156D42A222A14006C3B7A /* Manrope-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CD2A222A14006C3B7A /* Manrope-Regular.ttf */; };
+		440156D52A222A14006C3B7A /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CE2A222A14006C3B7A /* Manrope-Bold.ttf */; };
+		440156D62A222A14006C3B7A /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CF2A222A14006C3B7A /* Manrope-ExtraBold.ttf */; };
+		440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156D72A2231FF006C3B7A /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		440156922A221FC6006C3B7A /* MonumentalHabitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonumentalHabitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		440156952A221FC6006C3B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		440156972A221FC6006C3B7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		440156992A221FC6006C3B7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4401569C2A221FC6006C3B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4401569E2A221FC8006C3B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		440156A12A221FC8006C3B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		440156A32A221FC8006C3B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		440156B32A2224A3006C3B7A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		440156BA2A2226B7006C3B7A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		440156BC2A222886006C3B7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		440156BE2A2228D6006C3B7A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		440156C32A2229BB006C3B7A /* Klasik Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Klasik Shadow.otf"; sourceTree = "<group>"; };
+		440156C42A2229BB006C3B7A /* Klasik Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Klasik Regular.otf"; sourceTree = "<group>"; };
+		440156C52A2229BC006C3B7A /* Klasik Rough.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Klasik Rough.otf"; sourceTree = "<group>"; };
+		440156C92A222A14006C3B7A /* Manrope-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Medium.ttf"; sourceTree = "<group>"; };
+		440156CA2A222A14006C3B7A /* Manrope-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Light.ttf"; sourceTree = "<group>"; };
+		440156CB2A222A14006C3B7A /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
+		440156CC2A222A14006C3B7A /* Manrope-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraLight.ttf"; sourceTree = "<group>"; };
+		440156CD2A222A14006C3B7A /* Manrope-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Regular.ttf"; sourceTree = "<group>"; };
+		440156CE2A222A14006C3B7A /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
+		440156CF2A222A14006C3B7A /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
+		440156D72A2231FF006C3B7A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,140 @@
 		440156942A221FC6006C3B7A /* MonumentalHabitApp */ = {
 			isa = PBXGroup;
 			children = (
-				440156952A221FC6006C3B7A /* AppDelegate.swift */,
-				440156972A221FC6006C3B7A /* SceneDelegate.swift */,
-				440156992A221FC6006C3B7A /* ViewController.swift */,
-				4401569B2A221FC6006C3B7A /* Main.storyboard */,
-				4401569E2A221FC8006C3B7A /* Assets.xcassets */,
-				440156A02A221FC8006C3B7A /* LaunchScreen.storyboard */,
-				440156A32A221FC8006C3B7A /* Info.plist */,
+				440156AC2A222048006C3B7A /* Resources */,
+				440156AB2A222036006C3B7A /* Utils */,
+				440156AA2A22202E006C3B7A /* Screens */,
+				440156A92A22201A006C3B7A /* SupportingFiles */,
 			);
 			path = MonumentalHabitApp;
+			sourceTree = "<group>";
+		};
+		440156A92A22201A006C3B7A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				440156A02A221FC8006C3B7A /* LaunchScreen.storyboard */,
+				440156A32A221FC8006C3B7A /* Info.plist */,
+				440156952A221FC6006C3B7A /* AppDelegate.swift */,
+				440156972A221FC6006C3B7A /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		440156AA2A22202E006C3B7A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				440156B22A22246A006C3B7A /* Profile */,
+				440156B12A22244C006C3B7A /* Community */,
+				440156B02A22243C006C3B7A /* Home */,
+				440156AF2A222274006C3B7A /* SignUp */,
+				440156AE2A222256006C3B7A /* Login */,
+				440156AD2A22224F006C3B7A /* Onboarding */,
+				440156BC2A222886006C3B7A /* ViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		440156AB2A222036006C3B7A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				440156B52A2224D9006C3B7A /* Extensions */,
+				440156B32A2224A3006C3B7A /* Colors.swift */,
+				440156BE2A2228D6006C3B7A /* Fonts.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		440156AC2A222048006C3B7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				440156C02A222994006C3B7A /* Fonts */,
+				4401569E2A221FC8006C3B7A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		440156AD2A22224F006C3B7A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		440156AE2A222256006C3B7A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		440156AF2A222274006C3B7A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		440156B02A22243C006C3B7A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		440156B12A22244C006C3B7A /* Community */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		440156B22A22246A006C3B7A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		440156B52A2224D9006C3B7A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				440156BA2A2226B7006C3B7A /* UIColor+Extension.swift */,
+				440156D72A2231FF006C3B7A /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		440156C02A222994006C3B7A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				440156C22A2229B0006C3B7A /* Manrope */,
+				440156C12A222999006C3B7A /* Klasik */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		440156C12A222999006C3B7A /* Klasik */ = {
+			isa = PBXGroup;
+			children = (
+				440156C42A2229BB006C3B7A /* Klasik Regular.otf */,
+				440156C52A2229BC006C3B7A /* Klasik Rough.otf */,
+				440156C32A2229BB006C3B7A /* Klasik Shadow.otf */,
+			);
+			path = Klasik;
+			sourceTree = "<group>";
+		};
+		440156C22A2229B0006C3B7A /* Manrope */ = {
+			isa = PBXGroup;
+			children = (
+				440156CE2A222A14006C3B7A /* Manrope-Bold.ttf */,
+				440156CF2A222A14006C3B7A /* Manrope-ExtraBold.ttf */,
+				440156CC2A222A14006C3B7A /* Manrope-ExtraLight.ttf */,
+				440156CA2A222A14006C3B7A /* Manrope-Light.ttf */,
+				440156C92A222A14006C3B7A /* Manrope-Medium.ttf */,
+				440156CD2A222A14006C3B7A /* Manrope-Regular.ttf */,
+				440156CB2A222A14006C3B7A /* Manrope-SemiBold.ttf */,
+			);
+			path = Manrope;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +276,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440156D02A222A14006C3B7A /* Manrope-Medium.ttf in Resources */,
 				440156A22A221FC8006C3B7A /* LaunchScreen.storyboard in Resources */,
+				440156D12A222A14006C3B7A /* Manrope-Light.ttf in Resources */,
+				440156C82A2229BC006C3B7A /* Klasik Rough.otf in Resources */,
 				4401569F2A221FC8006C3B7A /* Assets.xcassets in Resources */,
-				4401569D2A221FC6006C3B7A /* Main.storyboard in Resources */,
+				440156C72A2229BC006C3B7A /* Klasik Regular.otf in Resources */,
+				440156D42A222A14006C3B7A /* Manrope-Regular.ttf in Resources */,
+				440156D22A222A14006C3B7A /* Manrope-SemiBold.ttf in Resources */,
+				440156D32A222A14006C3B7A /* Manrope-ExtraLight.ttf in Resources */,
+				440156D62A222A14006C3B7A /* Manrope-ExtraBold.ttf in Resources */,
+				440156C62A2229BC006C3B7A /* Klasik Shadow.otf in Resources */,
+				440156D52A222A14006C3B7A /* Manrope-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +298,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4401569A2A221FC6006C3B7A /* ViewController.swift in Sources */,
+				440156BD2A222886006C3B7A /* ViewController.swift in Sources */,
+				440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */,
 				440156962A221FC6006C3B7A /* AppDelegate.swift in Sources */,
+				440156B42A2224A3006C3B7A /* Colors.swift in Sources */,
 				440156982A221FC6006C3B7A /* SceneDelegate.swift in Sources */,
+				440156BF2A2228D6006C3B7A /* Fonts.swift in Sources */,
+				440156BB2A2226B7006C3B7A /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4401569B2A221FC6006C3B7A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4401569C2A221FC6006C3B7A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		440156A02A221FC8006C3B7A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +445,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9W5STY688V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MonumentalHabitApp/Info.plist;
+				INFOPLIST_FILE = MonumentalHabitApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +472,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9W5STY688V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MonumentalHabitApp/Info.plist;
+				INFOPLIST_FILE = MonumentalHabitApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
