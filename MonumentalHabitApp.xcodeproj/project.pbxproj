@@ -28,6 +28,7 @@
 		440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156D72A2231FF006C3B7A /* UIView+Extension.swift */; };
 		440156DD2A2237DA006C3B7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156DC2A2237DA006C3B7A /* LoginViewController.swift */; };
 		440156E12A230E21006C3B7A /* CustomInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156E02A230E21006C3B7A /* CustomInputTextField.swift */; };
+		440156E52A232112006C3B7A /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156E42A232112006C3B7A /* CustomButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		440156D72A2231FF006C3B7A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		440156DC2A2237DA006C3B7A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		440156E02A230E21006C3B7A /* CustomInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputTextField.swift; sourceTree = "<group>"; };
+		440156E42A232112006C3B7A /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				440156E02A230E21006C3B7A /* CustomInputTextField.swift */,
+				440156E42A232112006C3B7A /* CustomButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				440156962A221FC6006C3B7A /* AppDelegate.swift in Sources */,
 				440156B42A2224A3006C3B7A /* Colors.swift in Sources */,
 				440156E12A230E21006C3B7A /* CustomInputTextField.swift in Sources */,
+				440156E52A232112006C3B7A /* CustomButtonView.swift in Sources */,
 				440156DD2A2237DA006C3B7A /* LoginViewController.swift in Sources */,
 				440156982A221FC6006C3B7A /* SceneDelegate.swift in Sources */,
 				440156BF2A2228D6006C3B7A /* Fonts.swift in Sources */,
