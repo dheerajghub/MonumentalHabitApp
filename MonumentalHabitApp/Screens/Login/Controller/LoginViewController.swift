@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     // MARK: PROPERTIES -
     
     let presentationStackView: UIStackView = {
@@ -48,6 +48,20 @@ class LoginViewController: UIViewController {
         return textField
     }()
     
+    let demoButton1: CustomButtonView = {
+        let button = CustomButtonView()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.configuration = CustomButtonViewConfiguration(withImage: true)
+        return button
+    }()
+    
+    let demoButton2: CustomButtonView = {
+        let button = CustomButtonView()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.configuration = CustomButtonViewConfiguration()
+        return button
+    }()
+    
     // MARK: MAIN -
     
     override func viewDidLoad() {
@@ -66,6 +80,9 @@ class LoginViewController: UIViewController {
         presentationStackView.addArrangedSubview(demoTextField2)
         presentationStackView.addArrangedSubview(demoTextField3)
         presentationStackView.addArrangedSubview(demoTextField4)
+        
+        presentationStackView.addArrangedSubview(demoButton1)
+        presentationStackView.addArrangedSubview(demoButton2)
     }
     
     func setUpConstraints(){
@@ -79,7 +96,10 @@ class LoginViewController: UIViewController {
             demoTextField1.heightAnchor.constraint(equalToConstant: 50),
             demoTextField2.heightAnchor.constraint(equalToConstant: 50),
             demoTextField3.heightAnchor.constraint(equalToConstant: 50),
-            demoTextField4.heightAnchor.constraint(equalToConstant: 50)
+            demoTextField4.heightAnchor.constraint(equalToConstant: 50),
+            
+            demoButton1.heightAnchor.constraint(equalToConstant: 50),
+            demoButton2.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 

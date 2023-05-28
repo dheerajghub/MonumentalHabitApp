@@ -171,8 +171,8 @@ class CustomInputTextField: UIView {
     func configure(){
         guard let configuration = configuration else { return }
         
-        inputTextFieldLeadingConstraint?.constant = configuration.withImage ? 60 : 10
-        inputTextFieldTrailingConstraint?.constant = configuration.withActionButton ? -60 : -10
+        inputTextFieldLeadingConstraint?.constant = configuration.withImage ? 60 : 15
+        inputTextFieldTrailingConstraint?.constant = configuration.withActionButton ? -50 : -15
         
         actionButtonView.isHidden = configuration.withActionButton ? false : true
         inputImageView.isHidden = configuration.withImage ? false : true
