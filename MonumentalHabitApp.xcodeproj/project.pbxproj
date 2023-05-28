@@ -26,6 +26,8 @@
 		440156D52A222A14006C3B7A /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CE2A222A14006C3B7A /* Manrope-Bold.ttf */; };
 		440156D62A222A14006C3B7A /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CF2A222A14006C3B7A /* Manrope-ExtraBold.ttf */; };
 		440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156D72A2231FF006C3B7A /* UIView+Extension.swift */; };
+		C25102732A2238EF003FB0A5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25102722A2238EF003FB0A5 /* SplashViewController.swift */; };
+		C25102752A2246A5003FB0A5 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25102742A2246A5003FB0A5 /* IntroductionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		440156CE2A222A14006C3B7A /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		440156CF2A222A14006C3B7A /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
 		440156D72A2231FF006C3B7A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C25102722A2238EF003FB0A5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		C25102742A2246A5003FB0A5 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +108,7 @@
 		440156AA2A22202E006C3B7A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				440156B22A22246A006C3B7A /* Profile */,
-				440156B12A22244C006C3B7A /* Community */,
-				440156B02A22243C006C3B7A /* Home */,
-				440156AF2A222274006C3B7A /* SignUp */,
-				440156AE2A222256006C3B7A /* Login */,
-				440156AD2A22224F006C3B7A /* Onboarding */,
+				C25102712A2238D1003FB0A5 /* Onboarding */,
 				440156BC2A222886006C3B7A /* ViewController.swift */,
 			);
 			path = Screens;
@@ -132,48 +131,6 @@
 				4401569E2A221FC8006C3B7A /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		440156AD2A22224F006C3B7A /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		440156AE2A222256006C3B7A /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		440156AF2A222274006C3B7A /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
-		440156B02A22243C006C3B7A /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		440156B12A22244C006C3B7A /* Community */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Community;
-			sourceTree = "<group>";
-		};
-		440156B22A22246A006C3B7A /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		440156B52A2224D9006C3B7A /* Extensions */ = {
@@ -216,6 +173,15 @@
 				440156CB2A222A14006C3B7A /* Manrope-SemiBold.ttf */,
 			);
 			path = Manrope;
+			sourceTree = "<group>";
+		};
+		C25102712A2238D1003FB0A5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C25102722A2238EF003FB0A5 /* SplashViewController.swift */,
+				C25102742A2246A5003FB0A5 /* IntroductionViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +267,8 @@
 				440156BD2A222886006C3B7A /* ViewController.swift in Sources */,
 				440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */,
 				440156962A221FC6006C3B7A /* AppDelegate.swift in Sources */,
+				C25102732A2238EF003FB0A5 /* SplashViewController.swift in Sources */,
+				C25102752A2246A5003FB0A5 /* IntroductionViewController.swift in Sources */,
 				440156B42A2224A3006C3B7A /* Colors.swift in Sources */,
 				440156982A221FC6006C3B7A /* SceneDelegate.swift in Sources */,
 				440156BF2A2228D6006C3B7A /* Fonts.swift in Sources */,
