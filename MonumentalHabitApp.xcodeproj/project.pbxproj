@@ -26,6 +26,8 @@
 		440156D52A222A14006C3B7A /* Manrope-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CE2A222A14006C3B7A /* Manrope-Bold.ttf */; };
 		440156D62A222A14006C3B7A /* Manrope-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 440156CF2A222A14006C3B7A /* Manrope-ExtraBold.ttf */; };
 		440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156D72A2231FF006C3B7A /* UIView+Extension.swift */; };
+		440156DD2A2237DA006C3B7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156DC2A2237DA006C3B7A /* LoginViewController.swift */; };
+		440156E12A230E21006C3B7A /* CustomInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156E02A230E21006C3B7A /* CustomInputTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		440156CE2A222A14006C3B7A /* Manrope-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-Bold.ttf"; sourceTree = "<group>"; };
 		440156CF2A222A14006C3B7A /* Manrope-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manrope-ExtraBold.ttf"; sourceTree = "<group>"; };
 		440156D72A2231FF006C3B7A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		440156DC2A2237DA006C3B7A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		440156E02A230E21006C3B7A /* CustomInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +108,11 @@
 		440156AA2A22202E006C3B7A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				440156DB2A2237D0006C3B7A /* Login */,
 				440156B22A22246A006C3B7A /* Profile */,
 				440156B12A22244C006C3B7A /* Community */,
 				440156B02A22243C006C3B7A /* Home */,
 				440156AF2A222274006C3B7A /* SignUp */,
-				440156AE2A222256006C3B7A /* Login */,
 				440156AD2A22224F006C3B7A /* Onboarding */,
 				440156BC2A222886006C3B7A /* ViewController.swift */,
 			);
@@ -139,13 +143,6 @@
 			children = (
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		440156AE2A222256006C3B7A /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		440156AF2A222274006C3B7A /* SignUp */ = {
@@ -216,6 +213,31 @@
 				440156CB2A222A14006C3B7A /* Manrope-SemiBold.ttf */,
 			);
 			path = Manrope;
+			sourceTree = "<group>";
+		};
+		440156DB2A2237D0006C3B7A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				440156DF2A230DF5006C3B7A /* Controller */,
+				440156DE2A230DEB006C3B7A /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		440156DE2A230DEB006C3B7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				440156E02A230E21006C3B7A /* CustomInputTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		440156DF2A230DF5006C3B7A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				440156DC2A2237DA006C3B7A /* LoginViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +324,8 @@
 				440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */,
 				440156962A221FC6006C3B7A /* AppDelegate.swift in Sources */,
 				440156B42A2224A3006C3B7A /* Colors.swift in Sources */,
+				440156E12A230E21006C3B7A /* CustomInputTextField.swift in Sources */,
+				440156DD2A2237DA006C3B7A /* LoginViewController.swift in Sources */,
 				440156982A221FC6006C3B7A /* SceneDelegate.swift in Sources */,
 				440156BF2A2228D6006C3B7A /* Fonts.swift in Sources */,
 				440156BB2A2226B7006C3B7A /* UIColor+Extension.swift in Sources */,
