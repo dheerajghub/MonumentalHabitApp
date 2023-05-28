@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Monumental Habit App"
+        label.text = "HOME"
         label.font = Font(.installed(.klasikRough), size: .custom(35)).instance
         label.textColor = .black
         label.numberOfLines = 0
