@@ -10,9 +10,19 @@ import UIKit
 public struct CustomButtonViewConfiguration {
     
     let withImage: Bool
+    let buttonImage: UIImage?
+    let buttonTitle: String
+    let buttonFont: UIFont
+    let buttonTitleColor: UIColor
+    let buttonColor: UIColor
     
-    init(withImage: Bool = false) {
+    init(withImage: Bool, buttonImage: UIImage? = nil, buttonTitle: String, buttonFont: UIFont, buttonTitleColor: UIColor, buttonColor: UIColor) {
         self.withImage = withImage
+        self.buttonTitle = buttonTitle
+        self.buttonFont = buttonFont
+        self.buttonTitleColor = buttonTitleColor
+        self.buttonColor = buttonColor
+        self.buttonImage = buttonImage
     }
     
 }
@@ -93,7 +103,7 @@ class CustomButtonView: UIView {
         ])
     }
     
-    func configure(){
+    private func configure(){
         
         guard let configuration = configuration else { return }
         
@@ -104,11 +114,20 @@ class CustomButtonView: UIView {
             stackView.addArrangedSubview(buttonImage)
             stackView.addArrangedSubview(buttonTitle)
             
+            if let buttonImage = configuration.buttonImage {
+                self.buttonImage.image = buttonImage
+            }
+            
         } else {
             
             stackView.addArrangedSubview(buttonTitle)
             
         }
+        
+        backgroundColor = configuration.buttonColor
+        buttonTitle.text = configuration.buttonTitle
+        buttonTitle.font = configuration.buttonFont
+        buttonTitle.textColor = configuration.buttonTitleColor
         
     }
 
