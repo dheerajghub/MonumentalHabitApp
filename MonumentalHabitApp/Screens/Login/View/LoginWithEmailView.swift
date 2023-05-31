@@ -40,6 +40,7 @@ class LoginWithEmailView: UIView {
             withActionButton: false,
             backgroundColor: Color.morningLight2,
             dividerColor: Color.morningLight1,
+            iconImage: UIImage(named: "ic_email") ,
             placeHolderData: CustomTextFieldPlaceHolder(
                 color: Color.eclipseLight1,
                 title: "Email",
@@ -65,6 +66,7 @@ class LoginWithEmailView: UIView {
             withActionButton: true,
             backgroundColor: Color.morningLight2,
             dividerColor: Color.morningLight1,
+            iconImage: UIImage(named: "ic_pass"),
             placeHolderData: CustomTextFieldPlaceHolder(
                 color: Color.eclipseLight1,
                 title: "Password",

@@ -49,7 +49,6 @@ class CustomButtonView: UIView {
     let buttonImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = .gray.withAlphaComponent(0.5)
         image.layer.cornerRadius = 5
         return image
     }()
@@ -116,6 +115,9 @@ class CustomButtonView: UIView {
             
             if let buttonImage = configuration.buttonImage {
                 self.buttonImage.image = buttonImage
+                self.buttonImage.backgroundColor = .clear
+            } else {
+                self.buttonImage.backgroundColor = .gray.withAlphaComponent(0.5)
             }
             
         } else {
