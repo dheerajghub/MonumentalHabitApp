@@ -7,14 +7,64 @@
 
 import UIKit
 
+public struct CustomTextFieldPlaceHolder {
+    
+    let color: UIColor
+    let title: String
+    let font: UIFont
+    
+    init(color: UIColor = .lightGray, title: String = "Type Something.." , font: UIFont = Font(.installed(.manropeMedium), size: .custom(16)).instance) {
+        self.color = color
+        self.title = title
+        self.font = font
+    }
+    
+}
+
+public struct CustomInputTextFieldTitleData {
+    
+    let tintColor: UIColor
+    let textColor: UIColor
+    let font: UIFont
+    
+    init(tintColor: UIColor, textColor: UIColor, font: UIFont) {
+        self.tintColor = tintColor
+        self.textColor = textColor
+        self.font = font
+    }
+    
+}
+
 public struct CustomTextFieldConfiguration {
     
     let withImage: Bool
     let withActionButton: Bool
+    let backgroundColor: UIColor
+    let dividerColor: UIColor
+    let iconImage: UIImage?
+    let actionButtonImage: UIImage?
     
-    init(withImage: Bool = false , withActionButton: Bool = false) {
+    let placeHolderData: CustomTextFieldPlaceHolder?
+    let titleData: CustomInputTextFieldTitleData?
+    
+    init(
+        withImage: Bool,
+        withActionButton: Bool,
+        backgroundColor: UIColor = .lightGray.withAlphaComponent(0.3),
+        dividerColor: UIColor = .gray.withAlphaComponent(0.5),
+        iconImage: UIImage? = nil,
+        actionButtonImage: UIImage? = nil,
+        placeHolderData: CustomTextFieldPlaceHolder? = nil,
+        titleData: CustomInputTextFieldTitleData? = nil
+    ) {
         self.withImage = withImage
         self.withActionButton = withActionButton
+        self.dividerColor = dividerColor
+        self.backgroundColor = backgroundColor
+        self.iconImage = iconImage
+        self.actionButtonImage = actionButtonImage
+        self.placeHolderData = placeHolderData
+        self.titleData = titleData
     }
     
 }
@@ -35,7 +85,6 @@ class CustomInputTextField: UIView {
     let backgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray.withAlphaComponent(0.3)
         view.layer.cornerRadius = 10
         return view
     }()
@@ -51,8 +100,6 @@ class CustomInputTextField: UIView {
     let inputImageIcon: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = .gray.withAlphaComponent(0.5)
-        image.layer.cornerRadius = 5
         return image
     }()
     
@@ -61,7 +108,6 @@ class CustomInputTextField: UIView {
     let dividerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .gray.withAlphaComponent(0.5)
         return view
     }()
     
@@ -84,7 +130,7 @@ class CustomInputTextField: UIView {
     let actionButtonImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = .gray.withAlphaComponent(0.5)
+        image.backgroundColor = .black.withAlphaComponent(0.8)
         image.layer.cornerRadius = 5
         return image
     }()
@@ -169,6 +215,7 @@ class CustomInputTextField: UIView {
     }
     
     func configure(){
+        
         guard let configuration = configuration else { return }
         
         inputTextFieldLeadingConstraint?.constant = configuration.withImage ? 60 : 15
@@ -178,6 +225,44 @@ class CustomInputTextField: UIView {
         inputImageView.isHidden = configuration.withImage ? false : true
         
         dividerView.isHidden = configuration.withImage ? false : true
+        
+        if let placeHolderData = configuration.placeHolderData {
+            inputTextField.attributedPlaceholder = NSAttributedString(
+                string: "\(placeHolderData.title)",
+                attributes: [
+                    NSAttributedString.Key.foregroundColor: placeHolderData.color,
+                    NSAttributedString.Key.font: placeHolderData.font
+                ]
+            )
+        }
+        
+        if let iconImage = configuration.iconImage {
+            inputImageIcon.image = iconImage
+            inputImageIcon.backgroundColor = .clear
+            inputImageIcon.layer.cornerRadius = 0
+        } else {
+            inputImageIcon.backgroundColor = .black.withAlphaComponent(0.8)
+            inputImageIcon.layer.cornerRadius = 5
+        }
+        
+        dividerView.backgroundColor = configuration.dividerColor
+        backgroundView.backgroundColor = configuration.backgroundColor
+        
+        if let actionButtonImage = configuration.actionButtonImage {
+            self.actionButtonImage.image = actionButtonImage
+            self.actionButtonImage.backgroundColor = .clear
+            self.actionButtonImage.layer.cornerRadius = 0
+        } else {
+            self.actionButtonImage.backgroundColor = .black.withAlphaComponent(0.8)
+            self.actionButtonImage.layer.cornerRadius = 5
+        }
+        
+        if let titleData = configuration.titleData {
+            inputTextField.font = titleData.font
+            inputTextField.tintColor = titleData.tintColor
+            inputTextField.textColor = titleData.textColor
+        }
+        
     }
 
 }
