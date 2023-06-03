@@ -31,7 +31,7 @@ class LoginWithEmailView: UIView {
         return stackView
     }()
     
-    let emailTextField: CustomInputTextField = {
+    let emailTextFieldView: CustomInputTextField = {
         let textField = CustomInputTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         
@@ -57,7 +57,7 @@ class LoginWithEmailView: UIView {
         return textField
     }()
     
-    let passwordTextField: CustomInputTextField = {
+    let passwordTextFieldView: CustomInputTextField = {
         let textField = CustomInputTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         
@@ -79,6 +79,8 @@ class LoginWithEmailView: UIView {
             )
         )
         
+        textField.inputTextField.isSecureTextEntry = true
+        
         return textField
     }()
     
@@ -93,6 +95,8 @@ class LoginWithEmailView: UIView {
             buttonTitleColor: Color.eclipse,
             buttonColor: Color.morningDark
         )
+        
+        button.tapFeedBack()
         
         return button
     }()
@@ -115,8 +119,8 @@ class LoginWithEmailView: UIView {
         addSubview(headerView)
         
         addSubview(fieldsStackView)
-        fieldsStackView.addArrangedSubview(emailTextField)
-        fieldsStackView.addArrangedSubview(passwordTextField)
+        fieldsStackView.addArrangedSubview(emailTextFieldView)
+        fieldsStackView.addArrangedSubview(passwordTextFieldView)
         
         addSubview(loginButton)
     }
@@ -133,8 +137,8 @@ class LoginWithEmailView: UIView {
             fieldsStackView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 15),
             fieldsStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            emailTextField.heightAnchor.constraint(equalToConstant: 55),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 55),
+            emailTextFieldView.heightAnchor.constraint(equalToConstant: 55),
+            passwordTextFieldView.heightAnchor.constraint(equalToConstant: 55),
             
             loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
