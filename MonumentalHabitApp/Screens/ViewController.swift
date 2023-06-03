@@ -11,15 +11,21 @@ class ViewController: UIViewController {
 
     // MARK: PROPERTIES -
     
-    let label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "HOME"
-        label.font = Font(.installed(.klasikRough), size: .custom(35)).instance
-        label.textColor = .black
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        return label
+    lazy var demoButton: CustomButtonView = {
+        let button = CustomButtonView()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.configuration = CustomButtonViewConfiguration(
+            withImage: false,
+            buttonTitle: "Tap Me",
+            buttonFont: Font(.installed(.klasikRough), size: .custom(25)).instance,
+            buttonTitleColor: Color.eclipse,
+            buttonColor: Color.morning
+        )
+        
+        button.tapFeedBack()
+        
+        return button
     }()
     
     // MARK: MAIN -
@@ -34,11 +40,16 @@ class ViewController: UIViewController {
     
     func setUpViews(){
         view.backgroundColor = .white
-        view.addSubview(label)
+        view.addSubview(demoButton)
     }
     
     func setUpConstraints(){
-        label.pin(to: view)
+        NSLayoutConstraint.activate([
+            demoButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            demoButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            demoButton.heightAnchor.constraint(equalToConstant: 50),
+            demoButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
 
 }

@@ -43,7 +43,6 @@ public struct CustomTextFieldConfiguration {
     let dividerColor: UIColor
     let iconImage: UIImage?
     let actionButtonImage: UIImage?
-    
     let placeHolderData: CustomTextFieldPlaceHolder?
     let titleData: CustomInputTextFieldTitleData?
     
