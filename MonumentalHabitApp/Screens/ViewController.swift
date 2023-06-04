@@ -11,19 +11,11 @@ class ViewController: UIViewController {
 
     // MARK: PROPERTIES -
     
-    lazy var demoButton: CustomButtonView = {
-        let button = CustomButtonView()
+    lazy var demoButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         
-        button.configuration = CustomButtonViewConfiguration(
-            withImage: false,
-            buttonTitle: "Tap Me",
-            buttonFont: Font(.installed(.klasikRough), size: .custom(25)).instance,
-            buttonTitleColor: Color.eclipse,
-            buttonColor: Color.morning
-        )
-        
-        button.tapFeedBack()
+        button.hapticFeedback()
         
         return button
     }()

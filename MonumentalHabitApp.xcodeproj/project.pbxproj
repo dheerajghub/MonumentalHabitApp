@@ -28,11 +28,11 @@
 		440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156D72A2231FF006C3B7A /* UIView+Extension.swift */; };
 		440156DD2A2237DA006C3B7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156DC2A2237DA006C3B7A /* LoginViewController.swift */; };
 		440156E12A230E21006C3B7A /* CustomInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156E02A230E21006C3B7A /* CustomInputTextField.swift */; };
-		440156E52A232112006C3B7A /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156E42A232112006C3B7A /* CustomButtonView.swift */; };
 		440156F32A23978E006C3B7A /* LoginWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156F22A23978E006C3B7A /* LoginWithEmailView.swift */; };
 		440156F52A239844006C3B7A /* CustomCardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156F42A239844006C3B7A /* CustomCardHeaderView.swift */; };
 		440156FE2A26E92B006C3B7A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156FC2A26E92B006C3B7A /* SplashViewController.swift */; };
 		440156FF2A26E92B006C3B7A /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440156FD2A26E92B006C3B7A /* IntroductionViewController.swift */; };
+		440157012A2B17C6006C3B7A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440157002A2B17C6006C3B7A /* UIButton+Extension.swift */; };
 		44193D3A2A27666D003597CB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44193D392A27666D003597CB /* SignUpViewController.swift */; };
 		44193D3C2A277646003597CB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44193D3B2A277646003597CB /* UIViewController+Extension.swift */; };
 		44DDF7412A2624D100502B0D /* others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDF7402A2624D100502B0D /* others.swift */; };
@@ -62,11 +62,11 @@
 		440156D72A2231FF006C3B7A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		440156DC2A2237DA006C3B7A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		440156E02A230E21006C3B7A /* CustomInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputTextField.swift; sourceTree = "<group>"; };
-		440156E42A232112006C3B7A /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		440156F22A23978E006C3B7A /* LoginWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailView.swift; sourceTree = "<group>"; };
 		440156F42A239844006C3B7A /* CustomCardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardHeaderView.swift; sourceTree = "<group>"; };
 		440156FC2A26E92B006C3B7A /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		440156FD2A26E92B006C3B7A /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		440157002A2B17C6006C3B7A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		44193D392A27666D003597CB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		44193D3B2A277646003597CB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		44DDF7402A2624D100502B0D /* others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = others.swift; sourceTree = "<group>"; };
@@ -186,6 +186,7 @@
 				440156D72A2231FF006C3B7A /* UIView+Extension.swift */,
 				44DDF7402A2624D100502B0D /* others.swift */,
 				44193D3B2A277646003597CB /* UIViewController+Extension.swift */,
+				440157002A2B17C6006C3B7A /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				440156E02A230E21006C3B7A /* CustomInputTextField.swift */,
-				440156E42A232112006C3B7A /* CustomButtonView.swift */,
 				440156F42A239844006C3B7A /* CustomCardHeaderView.swift */,
 			);
 			path = ReusableViews;
@@ -369,11 +369,11 @@
 				440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */,
 				440156962A221FC6006C3B7A /* AppDelegate.swift in Sources */,
 				44193D3C2A277646003597CB /* UIViewController+Extension.swift in Sources */,
+				440157012A2B17C6006C3B7A /* UIButton+Extension.swift in Sources */,
 				440156B42A2224A3006C3B7A /* Colors.swift in Sources */,
 				440156E12A230E21006C3B7A /* CustomInputTextField.swift in Sources */,
 				440156FE2A26E92B006C3B7A /* SplashViewController.swift in Sources */,
 				44DDF7412A2624D100502B0D /* others.swift in Sources */,
-				440156E52A232112006C3B7A /* CustomButtonView.swift in Sources */,
 				440156DD2A2237DA006C3B7A /* LoginViewController.swift in Sources */,
 				44193D3A2A27666D003597CB /* SignUpViewController.swift in Sources */,
 				440156F32A23978E006C3B7A /* LoginWithEmailView.swift in Sources */,
@@ -519,7 +519,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5A693V6KR5;
+				DEVELOPMENT_TEAM = 9W5STY688V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MonumentalHabitApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -546,7 +546,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5A693V6KR5;
+				DEVELOPMENT_TEAM = 9W5STY688V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MonumentalHabitApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
