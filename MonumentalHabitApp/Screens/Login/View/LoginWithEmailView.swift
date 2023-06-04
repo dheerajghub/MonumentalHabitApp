@@ -67,6 +67,8 @@ class LoginWithEmailView: UIView {
             backgroundColor: Color.morningLight2,
             dividerColor: Color.morningLight1,
             iconImage: UIImage(named: "ic_pass"),
+            actionButtonImage: UIImage(named: "ic_eye_slash")?.withRenderingMode(.alwaysTemplate),
+            actionButtonColor: Color.eclipse,
             placeHolderData: CustomTextFieldPlaceHolder(
                 color: Color.eclipseLight1,
                 title: "Password",
@@ -84,20 +86,15 @@ class LoginWithEmailView: UIView {
         return textField
     }()
     
-    let loginButton: CustomButtonView = {
-        let button = CustomButtonView()
+    let loginButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        
-        button.configuration = CustomButtonViewConfiguration(
-            withImage: false,
-            buttonTitle: "Login",
-            buttonFont: Font(.installed(.manropeBold), size: .custom(16)).instance,
-            buttonTitleColor: Color.eclipse,
-            buttonColor: Color.morningDark
-        )
-        
-        button.tapFeedBack()
-        
+        button.setTitle("Login", for: .normal)
+        button.setTitleColor(Color.eclipse, for: .normal)
+        button.titleLabel?.font = Font(.installed(.manropeBold), size: .custom(16)).instance
+        button.backgroundColor = Color.morningDark
+        button.layer.cornerRadius = 8
+        button.hapticFeedback()
         return button
     }()
     

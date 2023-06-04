@@ -58,31 +58,29 @@ class LoginViewController: UIViewController {
         return stackView
     }()
     
-    let googleLoginButton: CustomButtonView = {
-        let button = CustomButtonView()
+    let googleLoginButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.configuration = CustomButtonViewConfiguration(
-            withImage: true,
-            buttonTitle: "Continue with Google",
-            buttonFont: Font(.installed(.manropeBold), size: .custom(16)).instance,
-            buttonTitleColor: Color.eclipse,
-            buttonColor: .white
-        )
-        button.tapFeedBack()
+        button.setTitle("   Continue with Google", for: .normal)
+        button.setTitleColor(Color.eclipse, for: .normal)
+        button.titleLabel?.font = Font(.installed(.manropeBold), size: .custom(16)).instance
+        button.setImage(UIImage(named: "ic_google"), for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 8
+        button.hapticFeedback()
         return button
     }()
     
-    let facebookLoginButton: CustomButtonView = {
-        let button = CustomButtonView()
+    let facebookLoginButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.configuration = CustomButtonViewConfiguration(
-            withImage: true,
-            buttonTitle: "Continue with Facebook",
-            buttonFont: Font(.installed(.manropeBold), size: .custom(16)).instance,
-            buttonTitleColor: Color.eclipse,
-            buttonColor: .white
-        )
-        button.tapFeedBack()
+        button.setTitle("   Continue with Facebook", for: .normal)
+        button.setTitleColor(Color.eclipse, for: .normal)
+        button.titleLabel?.font = Font(.installed(.manropeBold), size: .custom(16)).instance
+        button.setImage(UIImage(named: "ic_facebook"), for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 8
+        button.hapticFeedback()
         return button
     }()
     
@@ -95,6 +93,8 @@ class LoginViewController: UIViewController {
         view.layer.maskedCorners = [ .layerMinXMinYCorner , .layerMaxXMinYCorner ]
         
         view.passwordTextFieldView.actionButton.addTarget(self, action: #selector(togglePasswordButtonTapped(_:)), for: .touchUpInside)
+        
+        view.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         
         return view
     }()
@@ -192,21 +192,28 @@ class LoginViewController: UIViewController {
     
     // MARK: - ACTIONS
     
+    @objc func loginButtonTapped(){
+        print("LoginTapped")
+        view.endEditing(true)
+    }
+    
     @objc func togglePasswordButtonTapped(_ sender: UIButton){
     
         let passwordTextFieldView = self.loginWithEmailCard.passwordTextFieldView
-        let actionButton = passwordTextFieldView.actionButton
+        let actionButtonImage = passwordTextFieldView.actionButtonImage
         
         if showPassword {
-            passwordTextFieldView.actionButtonImage.backgroundColor = .black
             showPassword = false
-            passwordTextFieldView.inputTextField.isSecureTextEntry = false
+            actionButtonImage.image = UIImage(named: "ic_eye_slash")?.withRenderingMode(.alwaysTemplate)
+            passwordTextFieldView.inputTextField.isSecureTextEntry = true
             
         } else {
-            passwordTextFieldView.actionButtonImage.backgroundColor = .red
             showPassword = true
-            passwordTextFieldView.inputTextField.isSecureTextEntry = true
+            actionButtonImage.image = UIImage(named: "ic_eye")?.withRenderingMode(.alwaysTemplate)
+            passwordTextFieldView.inputTextField.isSecureTextEntry = false
         }
+        
+        actionButtonImage.tintColor = Color.eclipse
         
     }
     
