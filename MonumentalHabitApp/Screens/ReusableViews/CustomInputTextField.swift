@@ -43,7 +43,7 @@ public struct CustomTextFieldConfiguration {
     let dividerColor: UIColor
     let iconImage: UIImage?
     let actionButtonImage: UIImage?
-    
+    let actionButtonTintColor: UIColor
     let placeHolderData: CustomTextFieldPlaceHolder?
     let titleData: CustomInputTextFieldTitleData?
     
@@ -54,6 +54,7 @@ public struct CustomTextFieldConfiguration {
         dividerColor: UIColor = .gray.withAlphaComponent(0.5),
         iconImage: UIImage? = nil,
         actionButtonImage: UIImage? = nil,
+        actionButtonColor: UIColor = Color.eclipse,
         placeHolderData: CustomTextFieldPlaceHolder? = nil,
         titleData: CustomInputTextFieldTitleData? = nil
     ) {
@@ -65,6 +66,7 @@ public struct CustomTextFieldConfiguration {
         self.actionButtonImage = actionButtonImage
         self.placeHolderData = placeHolderData
         self.titleData = titleData
+        self.actionButtonTintColor = actionButtonColor
     }
     
 }
@@ -198,8 +200,8 @@ class CustomInputTextField: UIView {
             actionButtonView.topAnchor.constraint(equalTo: topAnchor),
             actionButtonView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            actionButtonImage.widthAnchor.constraint(equalToConstant: 30),
-            actionButtonImage.heightAnchor.constraint(equalToConstant: 30),
+            actionButtonImage.widthAnchor.constraint(equalToConstant: 25),
+            actionButtonImage.heightAnchor.constraint(equalToConstant: 25),
             actionButtonImage.centerYAnchor.constraint(equalTo: actionButtonView.centerYAnchor),
             actionButtonImage.centerXAnchor.constraint(equalTo: actionButtonView.centerXAnchor)
             
@@ -256,6 +258,8 @@ class CustomInputTextField: UIView {
             self.actionButtonImage.backgroundColor = .black.withAlphaComponent(0.8)
             self.actionButtonImage.layer.cornerRadius = 5
         }
+        
+        actionButtonImage.tintColor = configuration.actionButtonTintColor
         
         if let titleData = configuration.titleData {
             inputTextField.font = titleData.font

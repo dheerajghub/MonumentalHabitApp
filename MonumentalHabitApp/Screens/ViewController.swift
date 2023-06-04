@@ -11,15 +11,13 @@ class ViewController: UIViewController {
 
     // MARK: PROPERTIES -
     
-    let label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "HOME"
-        label.font = Font(.installed(.klasikRough), size: .custom(35)).instance
-        label.textColor = .black
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        return label
+    lazy var demoButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.hapticFeedback()
+        
+        return button
     }()
     
     // MARK: MAIN -
@@ -34,11 +32,16 @@ class ViewController: UIViewController {
     
     func setUpViews(){
         view.backgroundColor = .white
-        view.addSubview(label)
+        view.addSubview(demoButton)
     }
     
     func setUpConstraints(){
-        label.pin(to: view)
+        NSLayoutConstraint.activate([
+            demoButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            demoButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            demoButton.heightAnchor.constraint(equalToConstant: 50),
+            demoButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
 
 }

@@ -31,7 +31,7 @@ class LoginWithEmailView: UIView {
         return stackView
     }()
     
-    let emailTextField: CustomInputTextField = {
+    let emailTextFieldView: CustomInputTextField = {
         let textField = CustomInputTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         
@@ -57,7 +57,7 @@ class LoginWithEmailView: UIView {
         return textField
     }()
     
-    let passwordTextField: CustomInputTextField = {
+    let passwordTextFieldView: CustomInputTextField = {
         let textField = CustomInputTextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         
@@ -67,6 +67,8 @@ class LoginWithEmailView: UIView {
             backgroundColor: Color.morningLight2,
             dividerColor: Color.morningLight1,
             iconImage: UIImage(named: "ic_pass"),
+            actionButtonImage: UIImage(named: "ic_eye_slash")?.withRenderingMode(.alwaysTemplate),
+            actionButtonColor: Color.eclipse,
             placeHolderData: CustomTextFieldPlaceHolder(
                 color: Color.eclipseLight1,
                 title: "Password",
@@ -79,21 +81,20 @@ class LoginWithEmailView: UIView {
             )
         )
         
+        textField.inputTextField.isSecureTextEntry = true
+        
         return textField
     }()
     
-    let loginButton: CustomButtonView = {
-        let button = CustomButtonView()
+    let loginButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        
-        button.configuration = CustomButtonViewConfiguration(
-            withImage: false,
-            buttonTitle: "Login",
-            buttonFont: Font(.installed(.manropeBold), size: .custom(16)).instance,
-            buttonTitleColor: Color.eclipse,
-            buttonColor: Color.morningDark
-        )
-        
+        button.setTitle("Login", for: .normal)
+        button.setTitleColor(Color.eclipse, for: .normal)
+        button.titleLabel?.font = Font(.installed(.manropeBold), size: .custom(16)).instance
+        button.backgroundColor = Color.morningDark
+        button.layer.cornerRadius = 8
+        button.hapticFeedback()
         return button
     }()
     
@@ -115,8 +116,8 @@ class LoginWithEmailView: UIView {
         addSubview(headerView)
         
         addSubview(fieldsStackView)
-        fieldsStackView.addArrangedSubview(emailTextField)
-        fieldsStackView.addArrangedSubview(passwordTextField)
+        fieldsStackView.addArrangedSubview(emailTextFieldView)
+        fieldsStackView.addArrangedSubview(passwordTextFieldView)
         
         addSubview(loginButton)
     }
@@ -133,8 +134,8 @@ class LoginWithEmailView: UIView {
             fieldsStackView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 15),
             fieldsStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            emailTextField.heightAnchor.constraint(equalToConstant: 55),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 55),
+            emailTextFieldView.heightAnchor.constraint(equalToConstant: 55),
+            passwordTextFieldView.heightAnchor.constraint(equalToConstant: 55),
             
             loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),

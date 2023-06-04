@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     // MARK: PROPERTIES -
     
     var backgroundViewBottomConstraint: NSLayoutConstraint?
+    var bottomConstraint: NSLayoutConstraint?
+    var showPassword: Bool = false
     
     let backgroundView: UIView = {
         let view = UIView()
@@ -56,39 +58,43 @@ class LoginViewController: UIViewController {
         return stackView
     }()
     
-    let googleLoginButton: CustomButtonView = {
-        let button = CustomButtonView()
+    let googleLoginButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.configuration = CustomButtonViewConfiguration(
-            withImage: true,
-            buttonTitle: "Continue with Google",
-            buttonFont: Font(.installed(.manropeBold), size: .custom(16)).instance,
-            buttonTitleColor: Color.eclipse,
-            buttonColor: .white
-        )
+        button.setTitle("   Continue with Google", for: .normal)
+        button.setTitleColor(Color.eclipse, for: .normal)
+        button.titleLabel?.font = Font(.installed(.manropeBold), size: .custom(16)).instance
+        button.setImage(UIImage(named: "ic_google"), for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 8
+        button.hapticFeedback()
         return button
     }()
     
-    let facebookLoginButton: CustomButtonView = {
-        let button = CustomButtonView()
+    let facebookLoginButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.configuration = CustomButtonViewConfiguration(
-            withImage: true,
-            buttonTitle: "Continue with Facebook",
-            buttonFont: Font(.installed(.manropeBold), size: .custom(16)).instance,
-            buttonTitleColor: Color.eclipse,
-            buttonColor: .white
-        )
+        button.setTitle("   Continue with Facebook", for: .normal)
+        button.setTitleColor(Color.eclipse, for: .normal)
+        button.titleLabel?.font = Font(.installed(.manropeBold), size: .custom(16)).instance
+        button.setImage(UIImage(named: "ic_facebook"), for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 8
+        button.hapticFeedback()
         return button
     }()
     
-    let loginWithEmailCard: LoginWithEmailView = {
+    lazy var loginWithEmailCard: LoginWithEmailView = {
         let view = LoginWithEmailView()
         view.translatesAutoresizingMaskIntoConstraints = false
         
         view.backgroundColor = .white
         view.layer.cornerRadius = 15
         view.layer.maskedCorners = [ .layerMinXMinYCorner , .layerMaxXMinYCorner ]
+        
+        view.passwordTextFieldView.actionButton.addTarget(self, action: #selector(togglePasswordButtonTapped(_:)), for: .touchUpInside)
+        
+        view.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         
         return view
     }()
@@ -113,6 +119,9 @@ class LoginViewController: UIViewController {
     // MARK: FUNCTIONS -
     
     func setUpViews(){
+        
+        hideKeyboardWhenTappedAround()
+        
         view.backgroundColor = .white
         view.addSubview(backgroundView)
         backgroundView.addSubview(backgroundImage)
@@ -162,6 +171,14 @@ class LoginViewController: UIViewController {
         
         backgroundViewBottomConstraint = backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         backgroundViewBottomConstraint?.isActive = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification) , name: UIResponder.keyboardWillShowNotification , object: nil)
+                
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification) , name: UIResponder.keyboardWillHideNotification , object: nil)
+        
+        //bottomconstraints
+        bottomConstraint = NSLayoutConstraint(item: loginWithEmailCard, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
+        view.addConstraint(bottomConstraint!)
     }
     
     func animateBackGroundImage(){
@@ -169,6 +186,51 @@ class LoginViewController: UIViewController {
         self.backgroundViewBottomConstraint?.constant = -(self.loginWithEmailCard.frame.height + 100)
         UIView.animate(withDuration: 1.0) {
             self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    // MARK: - ACTIONS
+    
+    @objc func loginButtonTapped(){
+        print("LoginTapped")
+        view.endEditing(true)
+    }
+    
+    @objc func togglePasswordButtonTapped(_ sender: UIButton){
+    
+        let passwordTextFieldView = self.loginWithEmailCard.passwordTextFieldView
+        let actionButtonImage = passwordTextFieldView.actionButtonImage
+        
+        if showPassword {
+            showPassword = false
+            actionButtonImage.image = UIImage(named: "ic_eye_slash")?.withRenderingMode(.alwaysTemplate)
+            passwordTextFieldView.inputTextField.isSecureTextEntry = true
+            
+        } else {
+            showPassword = true
+            actionButtonImage.image = UIImage(named: "ic_eye")?.withRenderingMode(.alwaysTemplate)
+            passwordTextFieldView.inputTextField.isSecureTextEntry = false
+        }
+        
+        actionButtonImage.tintColor = Color.eclipse
+        
+    }
+    
+    @objc func handleKeyboardNotification(notification: NSNotification){
+            
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            
+            let isKeyboardShowing = notification.name == UIResponder.keyboardWillShowNotification
+            
+            bottomConstraint?.constant = isKeyboardShowing ? -keyboardHeight : 0
+            
+            UIView.animate(withDuration:0.1, delay: 0 , options: .curveEaseOut , animations: {
+                self.view.layoutIfNeeded()
+            } , completion: {(completed) in
+            })
         }
         
     }
