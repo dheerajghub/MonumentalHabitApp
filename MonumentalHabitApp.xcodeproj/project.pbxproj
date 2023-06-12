@@ -36,6 +36,8 @@
 		44193D3A2A27666D003597CB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44193D392A27666D003597CB /* SignUpViewController.swift */; };
 		44193D3C2A277646003597CB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44193D3B2A277646003597CB /* UIViewController+Extension.swift */; };
 		44DDF7412A2624D100502B0D /* others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDF7402A2624D100502B0D /* others.swift */; };
+		C2E86C192A34B9BF00F95387 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E86C182A34B9BF00F95387 /* CoursesViewController.swift */; };
+		C2E86C1F2A34C39F00F95387 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E86C1E2A34C39F00F95387 /* CourseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		44DDF7402A2624D100502B0D /* others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = others.swift; sourceTree = "<group>"; };
 		C25102722A2238EF003FB0A5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C25102742A2246A5003FB0A5 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		C2E86C182A34B9BF00F95387 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		C2E86C1E2A34C39F00F95387 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,13 +131,11 @@
 		440156AA2A22202E006C3B7A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C2E86C172A34B98600F95387 /* Course */,
 				44193D382A276654003597CB /* SignUp */,
 				440156FB2A26E92B006C3B7A /* Onboarding */,
 				440156F12A23976D006C3B7A /* ReusableViews */,
 				440156DB2A2237D0006C3B7A /* Login */,
-				440156B22A22246A006C3B7A /* Profile */,
-				440156B12A22244C006C3B7A /* Community */,
-				440156B02A22243C006C3B7A /* Home */,
 				440156BC2A222886006C3B7A /* ViewController.swift */,
 			);
 			path = Screens;
@@ -156,27 +158,6 @@
 				4401569E2A221FC8006C3B7A /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		440156B02A22243C006C3B7A /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		440156B12A22244C006C3B7A /* Community */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Community;
-			sourceTree = "<group>";
-		};
-		440156B22A22246A006C3B7A /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		440156B52A2224D9006C3B7A /* Extensions */ = {
@@ -284,6 +265,31 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		C2E86C172A34B98600F95387 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				C2E86C1B2A34BA4000F95387 /* View */,
+				C2E86C1A2A34BA2F00F95387 /* Controller */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		C2E86C1A2A34BA2F00F95387 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2E86C182A34B9BF00F95387 /* CoursesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2E86C1B2A34BA4000F95387 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2E86C1E2A34C39F00F95387 /* CourseTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,6 +374,7 @@
 				440156FF2A26E92B006C3B7A /* IntroductionViewController.swift in Sources */,
 				440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */,
 				440156962A221FC6006C3B7A /* AppDelegate.swift in Sources */,
+				C2E86C1F2A34C39F00F95387 /* CourseTableViewCell.swift in Sources */,
 				44193D3C2A277646003597CB /* UIViewController+Extension.swift in Sources */,
 				440157012A2B17C6006C3B7A /* UIButton+Extension.swift in Sources */,
 				440156B42A2224A3006C3B7A /* Colors.swift in Sources */,
@@ -381,6 +388,7 @@
 				440156BF2A2228D6006C3B7A /* Fonts.swift in Sources */,
 				440156F52A239844006C3B7A /* CustomCardHeaderView.swift in Sources */,
 				440156BB2A2226B7006C3B7A /* UIColor+Extension.swift in Sources */,
+				C2E86C192A34B9BF00F95387 /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
