@@ -19,6 +19,7 @@ class SplashViewController: UIViewController {
         label.textColor = Color.eclipse
         label.numberOfLines = 3
         label.textAlignment = .center
+        label.alpha = 0
         return label
     }()
     
@@ -27,6 +28,7 @@ class SplashViewController: UIViewController {
         img.translatesAutoresizingMaskIntoConstraints = false
         img.contentMode = .scaleAspectFill
         img.image = UIImage(named: "SplashImage")
+        img.alpha = 0
         return img
     }()
     
@@ -36,6 +38,18 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         setUpViews()
         setUpConstraints()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.animateImage()
+        }
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            let VC = IntroductionViewController()
+            VC.modalPresentationStyle = .fullScreen
+            self.present(VC, animated: false)
+        }
+
     }
     
     // MARK: FUNCTIONS -
@@ -56,4 +70,18 @@ class SplashViewController: UIViewController {
             image.widthAnchor.constraint(equalToConstant: view.frame.width)
         ])
     }
+    
+    func animateImage(){
+        
+        UIView.animate(withDuration: 2) {
+            self.image.alpha = 1
+            self.image.transform = .init(scaleX: 1.3, y: 1.3)
+        }
+        
+        UIView.animate(withDuration: 2) {
+            self.label.alpha = 1
+        }
+    
+    }
+    
 }

@@ -23,6 +23,5 @@ public struct Color {
     static let morningLight2 = UIColor().colorFromHexString("#FFF6ED")
     static let morningDark = UIColor().colorFromHexString("#FDA758")
     
-    static let orange = UIColor().colorFromHexString("#F9B566")
     static let shadow = UIColor().colorFromHexString("#57335326")
 }

@@ -16,16 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = LoginViewController()
-        window?.makeKeyAndVisible()
         
-//        let VC = SplashViewController()
-//        window?.rootViewController = VC
-//        window?.makeKeyAndVisible()
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-//            let VC = IntroductionViewController()
-//            self.window?.rootViewController = VC
-//        }
+        // check whether onboarding is done
+        let isOnboardingCompleted = UserDefaults.standard.bool(forKey: "isOnboardingCompleted")
+        
+        let VC = isOnboardingCompleted ? LoginViewController() : SplashViewController()
+        window?.rootViewController = VC
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
