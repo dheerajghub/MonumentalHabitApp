@@ -35,6 +35,9 @@
 		440157012A2B17C6006C3B7A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440157002A2B17C6006C3B7A /* UIButton+Extension.swift */; };
 		44193D3A2A27666D003597CB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44193D392A27666D003597CB /* SignUpViewController.swift */; };
 		44193D3C2A277646003597CB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44193D3B2A277646003597CB /* UIViewController+Extension.swift */; };
+		44DCFF082A35B36E00A3B6E9 /* SignUpHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DCFF072A35B36E00A3B6E9 /* SignUpHeaderView.swift */; };
+		44DCFF0A2A35BAE300A3B6E9 /* CustomCheckBoxLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DCFF092A35BAE300A3B6E9 /* CustomCheckBoxLabelView.swift */; };
+		44DCFF0D2A3EC94F00A3B6E9 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DCFF0C2A3EC94F00A3B6E9 /* SignUpViewModel.swift */; };
 		44DDF7412A2624D100502B0D /* others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDF7402A2624D100502B0D /* others.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,9 @@
 		440157002A2B17C6006C3B7A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		44193D392A27666D003597CB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		44193D3B2A277646003597CB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		44DCFF072A35B36E00A3B6E9 /* SignUpHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpHeaderView.swift; sourceTree = "<group>"; };
+		44DCFF092A35BAE300A3B6E9 /* CustomCheckBoxLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckBoxLabelView.swift; sourceTree = "<group>"; };
+		44DCFF0C2A3EC94F00A3B6E9 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		44DDF7402A2624D100502B0D /* others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = others.swift; sourceTree = "<group>"; };
 		C25102722A2238EF003FB0A5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C25102742A2246A5003FB0A5 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +269,7 @@
 			children = (
 				440156E02A230E21006C3B7A /* CustomInputTextField.swift */,
 				440156F42A239844006C3B7A /* CustomCardHeaderView.swift */,
+				44DCFF092A35BAE300A3B6E9 /* CustomCheckBoxLabelView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -279,9 +286,35 @@
 		44193D382A276654003597CB /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				44193D392A27666D003597CB /* SignUpViewController.swift */,
+				44DCFF0B2A3EC93F00A3B6E9 /* ViewModel */,
+				44DCFF062A35B35B00A3B6E9 /* View */,
+				44DCFF052A35B35600A3B6E9 /* Controller */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		44DCFF052A35B35600A3B6E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44193D392A27666D003597CB /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44DCFF062A35B35B00A3B6E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44DCFF072A35B36E00A3B6E9 /* SignUpHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44DCFF0B2A3EC93F00A3B6E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				44DCFF0C2A3EC94F00A3B6E9 /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +399,9 @@
 			files = (
 				440156BD2A222886006C3B7A /* ViewController.swift in Sources */,
 				440156FF2A26E92B006C3B7A /* IntroductionViewController.swift in Sources */,
+				44DCFF0D2A3EC94F00A3B6E9 /* SignUpViewModel.swift in Sources */,
 				440156D82A2231FF006C3B7A /* UIView+Extension.swift in Sources */,
+				44DCFF082A35B36E00A3B6E9 /* SignUpHeaderView.swift in Sources */,
 				440156962A221FC6006C3B7A /* AppDelegate.swift in Sources */,
 				44193D3C2A277646003597CB /* UIViewController+Extension.swift in Sources */,
 				440157012A2B17C6006C3B7A /* UIButton+Extension.swift in Sources */,
@@ -381,6 +416,7 @@
 				440156BF2A2228D6006C3B7A /* Fonts.swift in Sources */,
 				440156F52A239844006C3B7A /* CustomCardHeaderView.swift in Sources */,
 				440156BB2A2226B7006C3B7A /* UIColor+Extension.swift in Sources */,
+				44DCFF0A2A35BAE300A3B6E9 /* CustomCheckBoxLabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

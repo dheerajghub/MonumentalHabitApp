@@ -96,6 +96,8 @@ class LoginViewController: UIViewController {
         
         view.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         
+        view.signUpButton.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
+        
         return view
     }()
     
@@ -195,6 +197,12 @@ class LoginViewController: UIViewController {
     @objc func loginButtonTapped(){
         print("LoginTapped")
         view.endEditing(true)
+    }
+    
+    @objc func signupButtonTapped(){
+        let VC = SignUpViewController()
+        VC.modalPresentationStyle = .fullScreen
+        self.present(VC, animated: true)
     }
     
     @objc func togglePasswordButtonTapped(_ sender: UIButton){

@@ -98,6 +98,41 @@ class LoginWithEmailView: UIView {
         return button
     }()
     
+    let bottomActionStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .fillEqually
+        stackView.axis = .vertical
+        stackView.spacing = 4
+        return stackView
+    }()
+    
+    let forgotButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = Font(.installed(.manropeMedium), size: .custom(14)).instance
+        button.setTitleColor(Color.eclipse, for: .normal)
+        
+        // for underline attribute label
+        let underlineAttribute = [
+            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue
+        ]
+        let underlineAttributedString = NSAttributedString(string: "Forgot Password?", attributes: underlineAttribute)
+        button.setAttributedTitle(underlineAttributedString, for: .normal)
+        button.hapticFeedback()
+        return button
+    }()
+    
+    lazy var signUpButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Don't have an account? Sign up", for: .normal)
+        button.titleLabel?.font = Font(.installed(.manropeMedium), size: .custom(14)).instance
+        button.setTitleColor(Color.eclipse, for: .normal)
+        button.hapticFeedback()
+        return button
+    }()
+    
+    
+    
     // MARK: MAIN -
     
     override init(frame: CGRect) {
@@ -120,6 +155,10 @@ class LoginWithEmailView: UIView {
         fieldsStackView.addArrangedSubview(passwordTextFieldView)
         
         addSubview(loginButton)
+        
+        addSubview(bottomActionStackView)
+        bottomActionStackView.addArrangedSubview(forgotButton)
+        bottomActionStackView.addArrangedSubview(signUpButton)
     }
     
     func setUpConstraints(){
@@ -140,7 +179,14 @@ class LoginWithEmailView: UIView {
             loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             loginButton.heightAnchor.constraint(equalToConstant: 60),
-            loginButton.topAnchor.constraint(equalTo: fieldsStackView.bottomAnchor, constant: 20)
+            loginButton.topAnchor.constraint(equalTo: fieldsStackView.bottomAnchor, constant: 20),
+            
+            bottomActionStackView.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 20),
+            bottomActionStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            bottomActionStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            signUpButton.heightAnchor.constraint(equalToConstant: 20),
+            forgotButton.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 

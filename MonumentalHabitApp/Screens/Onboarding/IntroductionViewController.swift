@@ -76,7 +76,7 @@ class IntroductionViewController: UIViewController {
         let pageControl = UIPageControl()
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         pageControl.currentPageIndicatorTintColor = Color.eclipse
-        pageControl.pageIndicatorTintColor = Color.orange
+        pageControl.pageIndicatorTintColor = Color.morning
         pageControl.layer.shadowColor = Color.shadow.cgColor
         pageControl.layer.shadowOpacity = 0.15
         pageControl.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
@@ -101,8 +101,9 @@ class IntroductionViewController: UIViewController {
         button.setTitle("Get Started", for: .normal)
         button.setTitleColor(Color.eclipse, for: .normal)
         button.titleLabel?.font = Font(.installed(.manropeBold), size: .custom(17)).instance
-        button.backgroundColor = Color.sunset
+        button.backgroundColor = Color.morningDark
         button.layer.cornerRadius = 8
+        button.hapticFeedback()
         return button
     }()
     
@@ -219,13 +220,13 @@ class IntroductionViewController: UIViewController {
     
     
     @objc func getStartedButtonTapped() {
-//        let newViewController = ViewController()
-//        // Access sceneDelegate
-//        guard let sceneDelegate = UIApplication.shared.delegate as? SceneDelegate else {
-//            return
-//        }
-//        // Set new view controller as root view controller
-//        sceneDelegate.window?.rootViewController = newViewController
-//        sceneDelegate.window?.makeKeyAndVisible()
+        let VC = LoginViewController()
+        let navVC = UINavigationController(rootViewController: VC)
+        navVC.modalPresentationStyle = .fullScreen
+        self.present(navVC, animated: true)
+        
+        // onboarding completed
+        UserDefaults.standard.set(true, forKey: "isOnboardingCompleted")
+        
     }
 }
